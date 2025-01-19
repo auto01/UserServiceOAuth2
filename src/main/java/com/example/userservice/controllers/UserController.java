@@ -25,7 +25,7 @@ public class UserController {
     @PostMapping("/signup")
     public ResponseEntity<UserSingupResponseDto> signUp(@RequestBody UserSignupRequestDto userSignupRequestDto) {
         MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
-
+        System.out.println("Inside controller signUp method");
         try {
             UserSingupResponseDto userSingupResponseDt= userServiceImpl.signup(userSignupRequestDto);
             headers.add("status", userSingupResponseDt.getStatus().toString());

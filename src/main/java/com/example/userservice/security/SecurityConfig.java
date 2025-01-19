@@ -87,7 +87,7 @@ public class SecurityConfig {
 
         return http.build();
     }
-
+/*
     @Bean
     public UserDetailsService userDetailsService() {
         //UserDetails userDetails = User.withDefaultPasswordEncoder()
@@ -99,6 +99,9 @@ public class SecurityConfig {
 
         return new InMemoryUserDetailsManager(userDetails);
     }
+
+ */
+
 /*
     @Bean
     public RegisteredClientRepository registeredClientRepository() {

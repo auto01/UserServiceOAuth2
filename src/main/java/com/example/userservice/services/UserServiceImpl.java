@@ -49,6 +49,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserSingupResponseDto signup(UserSignupRequestDto userSignupRequestDto) {
         Optional<User> userOptional = userRepo.findUserByEmail(userSignupRequestDto.getEmail());
+        System.out.println("Inside service signup method");
         if (userOptional.isPresent()) {
             // user already present , navigate it to login page
             System.out.println("User already exists, please choose another one");
